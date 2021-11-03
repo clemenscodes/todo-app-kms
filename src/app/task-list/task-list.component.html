@@ -5,9 +5,9 @@
                 <h5 class="card-title">Create New Todo</h5>
             </div>
         </div>
-        <div class="card mt-4 shadow-sm">
+        <div *ngFor="let task of this.taskList; let i = index;" class="card mt-4 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">title <span style="display:none"></span></h5>
+                <h5 class="card-title">{{task.title}}<span style="display:none"></span></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><br></h6>
                 <p class="card-text"></p>
                 <button type="button" class="btn btn-secondary mr-3" >Done</button>
