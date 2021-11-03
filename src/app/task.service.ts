@@ -10,6 +10,7 @@ export class TaskService {
   _taskList: Task[] = [
     new Task('Aufgabe'),
     new Task('Noch eine Aufgabe'),
+    new Task('Nochmal eine Aufgabe'),
   ]
 
   get taskList(): Task[] {
