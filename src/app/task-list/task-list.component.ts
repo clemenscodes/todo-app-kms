@@ -15,4 +15,10 @@ export class TaskListComponent implements OnInit {
   get taskList(): Task[] {
     return this.taskService.taskList;
   }
+
+  openEditModal(editEntry: Task): void {
+    console.log(editEntry)
+    this.taskService.openTaskEditModal(editEntry).then();
+  }
+
 }

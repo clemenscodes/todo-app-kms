@@ -1,0 +1,18 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit Entry</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="itemInputTitle">Title</label>
+    <input type="text" class="form-control" id="itemInputTitle" [title]="title">
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark"
+          (click)="activeModal.dismiss()">Schließen
+  </button>
+  <button type="submit" class="btn btn-success" (click)="save(title)">Save</button>
+</div>
