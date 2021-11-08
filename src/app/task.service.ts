@@ -44,11 +44,11 @@ export class TaskService {
     return this._taskList;
   }
 
-  addTasK(task: Task) {
-    if (task.title.trim() == '') {
+  addTasK(title: string) {
+    if (title.trim() == "") {
       return;
     }
-    this.taskList.push(new Task(task.title));
+    this.taskList.push(new Task(title));
   }
 
   deleteTask(task: Task){
