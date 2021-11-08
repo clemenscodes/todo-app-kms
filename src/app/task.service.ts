@@ -48,4 +48,9 @@ export class TaskService {
     }
     this.taskList.push(new Task(task.title));
   }
+
+  taskDone(id: number){
+    this.taskList[id].done = true;
+    return;
+  }
 }
