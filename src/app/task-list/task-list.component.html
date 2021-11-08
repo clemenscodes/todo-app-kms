@@ -11,6 +11,7 @@
                 <h5 class="card-title">{{task.title}}<span style="display:none"></span></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><br></h6>
                 <p class="card-text"></p>
+                <button class="btn btn-outline-secondary" (click)="openEditModal(task)">Edit</button>
                 <button type="button" class="btn btn-secondary mr-3">Done</button>
                 <a href="#" class="card-link">Another link</a>
               <button (click)="this.taskService.deleteTask(task)" type="button" class="btn btn-secondary mr-3">Delete</button>
