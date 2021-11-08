@@ -12,9 +12,11 @@ export class TaskService {
   _taskList: Task[] = [new Task('Aufgabe'), new Task('Noch eine Aufgabe')];
 
   async openTaskEditModal(editEntry: Task): Promise<void> {
+    console.log(editEntry)
     const modalReference = this.modalService.open(TaskEditComponent);
     try {
-      const result = await modalReference.result;
+      const result = modalReference.componentInstance();
+      console.log(result);
       const title: string = result.title !== '' ? result.title : '';
       this.editTask(editEntry, title);
     } catch (err) {

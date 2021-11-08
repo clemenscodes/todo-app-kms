@@ -17,9 +17,9 @@ export class TaskEditComponent implements OnInit {
     this.title = '';
   }
 
-  save(): void {
+  save(title: string): void {
     if (this.title.trim().length > 0) {
-      this.activeModal.close({title: this.title});
+      this.activeModal.close({title});
     }
   }
   ngOnInit(): void { }

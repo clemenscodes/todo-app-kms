@@ -7,12 +7,12 @@
 <div class="modal-body">
   <div class="form-group">
     <label for="itemInputTitle">Title</label>
-    <input type="text" class="form-control" id="itemInputTitle">
+    <input type="text" class="form-control" id="itemInputTitle" [title]="title">
   </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark"
           (click)="activeModal.dismiss()">Schließen
   </button>
-  <button type="submit" class="btn btn-success" (click)="save()">Save</button>
+  <button type="submit" class="btn btn-success" (click)="save(title)">Save</button>
 </div>
