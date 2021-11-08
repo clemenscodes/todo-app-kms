@@ -23,4 +23,9 @@ export class TaskService {
     }
     this.taskList.push(new Task(task.title));
   }
+
+  onDelete(task: Task){
+    let index = this.taskList.indexOf(task);
+    this.taskList.splice(index,1);
+  }
 }
