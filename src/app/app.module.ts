@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TaskComponent } from './task/task.component';
 import {FormsModule} from "@angular/forms";
 import { TaskEditComponent } from './task-edit-modal/task-edit-modal.component';
+import { AddTaskComponent } from './add-task/add-task.component'
 
 @NgModule({
   declarations: [
