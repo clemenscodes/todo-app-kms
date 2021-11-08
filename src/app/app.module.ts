@@ -13,6 +13,7 @@ import { TaskEditComponent } from './task-edit-modal/task-edit-modal.component';
     TaskListComponent,
     TaskComponent,
     TaskEditComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
