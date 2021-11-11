@@ -33,4 +33,40 @@ describe('AddTaskComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should have label "title of todo"', () => {
+    const label: HTMLElement = fixture.nativeElement.querySelector('label');
+    expect(label.innerText).toMatch("Title of ToDo");
   });
+
+  it('should have no entry in form text field', () => {
+    expect(inputText.value).toEqual('');
+  })
+
+  it('should add task with add function', () => {
+    expect(taskService.taskList).toHaveSize(2); // 2 dummy entries
+    inputText.value = "test-task";
+    component.addTask();
+    expect(taskService.taskList).toHaveSize(3);
+  })
+
+  it('should not add empty task with add function', () => {
+    expect(taskService.taskList).toHaveSize(2); // 2 dummy entries
+    inputText.value = "";
+    component.addTask();
+    expect(taskService.taskList).toHaveSize(2);
+  })
+
+  it('should add task with submit button', () => {
+    expect(taskService.taskList).toHaveSize(2); // 2 dummy entries
+    fixture.whenStable().then(() => {
+      inputText.value = "test-task";
+      spyOn(component, 'addTask');
+      // submitButton = fixture.debugElement.query(By.css('button')).nativeElement;
+      submitButton = fixture.nativeElement.querySelector('button');
+      //submitButton.click(); // not working
+      expect(component.addTask).toHaveBeenCalled();
+      expect(taskService.taskList).toHaveSize(3);
+    })
+  })
+
+});
