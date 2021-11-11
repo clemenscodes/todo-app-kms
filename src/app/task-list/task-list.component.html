@@ -1,11 +1,5 @@
 <div class="container">
     <div class="card-columns">
-        <div class="card mt-4 bg-warning" style="cursor: pointer;">
-            <div class="card-body">
-                <h5 class="card-title">Create New Todo</h5>
-              <app-add-task></app-add-task>
-            </div>
-        </div>
         <div *ngFor="let task of this.taskList; let i = index;" class="card mt-4 shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">{{task.title}}<span style="display:none"></span></h5>
