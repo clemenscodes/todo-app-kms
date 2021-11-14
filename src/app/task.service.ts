@@ -52,6 +52,9 @@ export class TaskService {
   }
 
   deleteTask(task: Task){
+    if(this.taskList.length == 0){
+      return;
+    }
     let index = this.taskList.indexOf(task);
     this.taskList.splice(index,1);
   }
