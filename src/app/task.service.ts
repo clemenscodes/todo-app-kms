@@ -51,11 +51,13 @@ export class TaskService {
     this.taskList.push(new Task(title));
   }
 
-  deleteTask(task: Task){
+  deleteTask(task: Task) : number{
     if(this.taskList.length == 0){
-      return;
+      return 0;
     }
     let index = this.taskList.indexOf(task);
     this.taskList.splice(index,1);
+    return 1;
   }
+
 }
