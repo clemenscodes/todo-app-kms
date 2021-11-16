@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import { TaskService } from '../task.service';
 import { Task } from '../model/task'
 
@@ -6,6 +6,10 @@ import { Task } from '../model/task'
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss'],
+})
+
+@Injectable({
+  providedIn: 'root',
 })
 export class TaskListComponent implements OnInit {
   constructor(public taskService: TaskService) {}
