@@ -3,7 +3,7 @@ import {TaskService} from '../task.service';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-    selector: 'task-edit-modal',
+    selector: 'app-task-edit-modal',
     templateUrl: './task-edit-modal.component.html',
     styleUrls: ['./task-edit-modal.component.css']
 })
