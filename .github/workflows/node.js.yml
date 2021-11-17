@@ -30,7 +30,6 @@ jobs:
     - run: npm i -g @angular/cli
     - run: npm run build:ci
     - run: npm run test:ci
-    - run: npm run deploy
     - name: All things angular
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
       with:
