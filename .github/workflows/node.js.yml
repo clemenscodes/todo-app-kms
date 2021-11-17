@@ -29,5 +29,5 @@ jobs:
     - run: npm ci
     - run: npm i -g @angular/cli
     - run: ng build --base-href https://clemenscodes.github.io/todo-orga-app/
-    - run: npm run test
+    - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
     - run: npx angular-cli-ghpages --dir=dist/todo-app
