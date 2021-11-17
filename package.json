@@ -4,13 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href https://clemenscodes.github.io/todo-orga-app/",
+    "build": "ng build",
+    "build:ci": "ng build --base-href https://clemenscodes.github.io/todo-orga-app/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
-    "predeploy": "npm run build",
-    "deploy": "npx angular-cli-ghpages --dir=dist/todo-app"
+    "deploy": "ng deploy --base-href=https://clemenscodes.github.io/todo-orga-app/"
   },
   "private": true,
   "dependencies": {
