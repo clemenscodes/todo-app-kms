@@ -1,5 +1,4 @@
 import {TestBed} from '@angular/core/testing';
-
 import {TaskService} from './task.service';
 import {TaskListComponent} from "./task-list/task-list.component";
 import {Task} from "./model/task";

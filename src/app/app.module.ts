@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {TaskListComponent} from './task-list/task-list.component';
@@ -7,6 +7,7 @@ import {TaskComponent} from './task/task.component';
 import {FormsModule} from "@angular/forms";
 import {TaskEditComponent} from './task-edit-modal/task-edit-modal.component';
 import {AddTaskComponent} from './add-task/add-task.component';
+import {TaskService} from './task.service';
 
 @NgModule({
     declarations: [
@@ -21,8 +22,10 @@ import {AddTaskComponent} from './add-task/add-task.component';
         NgbModule,
         FormsModule,
     ],
-    providers: [],
+    providers: [TaskService],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
     bootstrap: [AppComponent]
+
 })
 export class AppModule {
 }

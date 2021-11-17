@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component } from '@angular/core';
 import {TaskService} from '../task.service';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
@@ -7,7 +7,7 @@ import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
     templateUrl: './task-edit-modal.component.html',
     styleUrls: ['./task-edit-modal.component.css']
 })
-export class TaskEditComponent implements OnInit {
+export class TaskEditComponent {
     public title: string;
 
     constructor(
@@ -21,8 +21,5 @@ export class TaskEditComponent implements OnInit {
         if (this.title.trim().length > 0) {
             this.activeModal.close({title});
         }
-    }
-
-    ngOnInit(): void {
     }
 }

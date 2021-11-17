@@ -1,3 +1,4 @@
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {TaskListComponent} from './task-list.component';
 import {Task} from "../model/task";
@@ -8,9 +9,9 @@ describe('TaskListComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [TaskListComponent]
-        })
-            .compileComponents();
+            declarations: [TaskListComponent],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA],
+        }).compileComponents();
     });
 
     beforeEach(() => {

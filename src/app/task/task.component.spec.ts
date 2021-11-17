@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
 import {TaskComponent} from './task.component';
 
 describe('TaskComponent', () => {
@@ -8,7 +8,8 @@ describe('TaskComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [TaskComponent]
+            declarations: [TaskComponent],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
         })
             .compileComponents();
     });

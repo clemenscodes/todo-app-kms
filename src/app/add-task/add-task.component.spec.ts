@@ -1,5 +1,5 @@
 import {ComponentFixture, ComponentFixtureAutoDetect, TestBed} from '@angular/core/testing';
-
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AddTaskComponent} from './add-task.component';
 import {TaskService} from "../task.service";
 import {By} from "@angular/platform-browser";
@@ -15,7 +15,8 @@ describe('AddTaskComponent', () => {
             declarations: [AddTaskComponent],
             providers: [
                 {provide: ComponentFixtureAutoDetect, useValue: true}
-            ]
+            ],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
         })
             .compileComponents();
     });
